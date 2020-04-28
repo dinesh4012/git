@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+button {
+padding:10px;
+ font-size: 15px;
+border-radius: 10px;
+  box-shadow: 0 5px #999;
+color: #fff;
+ background-color: #008080;
+    box-shadow: 0 2px #999;
+}
+button:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=50);
+ transform: translateY(4px);
+}
+</style>
+ <body background="http://www.thediamondworks.co.za/wp-content/uploads/2016/11/TheDiamondInstitute.jpg"> 
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "edgeless"
+});
+</script>
+<center>
+<textarea id="textarea" rows="5" cols="30">
+</textarea>
+<div class="button">
+
+<button onclick="document.getElementById('textarea').value = ''">Clear Data </button>
+</div>
+</center>
+<center>
+<div style="padding:10px">
+<button class="button" onclick="myFunction()">Download</button></center>
+</div>
+</div>
+<script>
+function myFunction() {
+if(textarea.value==0)
+{
+alert("empty");
+return;
+}
+var textArea = document.getElementById('textarea');
+var lines = textArea.value.split('\n');
+var str="";
+for (var j = 0; j < lines.length; j++) 
+{
+window.open(str+lines[j]);
+}
+}
+
+</script>
+</body>
+</html>
